@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+	<!-- Replace the content tag with appropriate information -->
+	<meta name="description" content="DESCRIPTION META TAG">
+	<meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+	<meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+	<meta property="og:url" content="URL OF THE WEBSITE"/>
+	<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+	<meta property="og:image" content="../static/image/your_banner_image.png" />
+	<meta property="og:image:width" content="1200"/>
+	<meta property="og:image:height" content="630"/>
+
+
+	<meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+	<meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+	<!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+	<meta name="twitter:image" content="../static/images/your_twitter_banner_image.png">
+	<meta name="twitter:card" content="summary_large_image">
+	<!-- Keywords for your paper to be indexed by-->
+	<meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+	<title>AnimeDiffusion</title>
+	<link rel="icon" type="image/x-icon" href="../static/images/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+	rel="stylesheet">
+
+	<link rel="stylesheet" href="../static/css/bulma.min.css">
+	<link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+	<link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+	<link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	<link rel="stylesheet" href="../static/css/index.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script defer src="../static/js/fontawesome.all.min.js"></script>
+	<script src="../static/js/bulma-carousel.min.js"></script>
+	<script src="../static/js/bulma-slider.min.js"></script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+		<script type="text/x-mathjax-config">
+			MathJax.Hub.Config({
+				tex2jax: {
+					inlineMath: [['$','$'], ['\\(','\\)']],
+					processEscapes: true
+				}
+			});
+		</script>
+	<script src="../static/js/index.js"></script>
+</head>
+
+<body>
+<section class="hero">
+	<div class="hero-body">
+		<div class="container is-max-desktop">
+			<div class="columns is-centered">
+				<div class="column has-text-centered">
+					<h1 class="xtitle is-1 publication-title">AnimeDiffusion: Anime Face Line Drawing</h1>
+					<h1 class="xtitle is-1 publication-title">Colorization via Diffusion Models</h1>
+					<div class="is-size-5 publication-authors">
+						<!-- Paper authors -->
+						<span class="author-block">
+							<a href="https://danielcho-hk.github.io/Daniel-Tsao.github.io/" target="_blank">Yu Cao</a><sup>&#8224;,1</sup>
+						</span>
+						<span class="author-block">
+							<a href="https://xq-meng.github.io/" target="_blank">Xiangqiao Meng</a><sup>&#8224;,1</sup>
+						</span>
+						<span class="author-block">
+							P.Y.Mok<sup>1</sup> &nbsp;
+						</span>
+						<span class="author-block">
+							Xueting Liu<sup>2</sup> &nbsp;
+						</span>
+						<span class="author-block">
+							<a href="http://graphics.csie.ncku.edu.tw/Tony/tony.htm" target="_blank">Tong-Yee Lee</a> <sup>3</sup>&nbsp;
+						</span>
+						<span class="author-block">
+							<a href="https://www4.comp.polyu.edu.hk/~pinli/" target="_blank">Ping Li</a> <sup>1</sup>&nbsp;
+						</span>
+						<br>
+
+						<div class="is-size-5 publication-authors">
+							<span class="author-block">
+								<sup>1</sup> The Hong Kong Polytechnic University, Hong Kong <br>
+								<sup>2</sup> Caritas Institute of Higher Education, Hong Kong <br>
+								<sup>3</sup> National Cheng Kung University, Taiwan
+							<span class="eql-cntrb"><small><br><sup>&#8224;</sup>Indicates Equal Contribution</small></span>
+						</div>
+
+						<div class="column has-text-centered">
+							<div class="publication-links">
+								<!-- Arxiv PDF Link -->
+								<span class="link-block">
+									<a href="https://arxiv.org/pdf/2303.11137.pdf" target="_blank" class="external-link ">
+										<span class="icon">
+											<i class="fas fa-file-pdf"></i>
+										</span>
+										<span>Paper</span>
+									</a>
+								</span>
+
+								<!-- Github Link -->
+								<span class="link-block">
+									<a href="https://github.com/xq-meng/AnimeDiffusion" target="_blank" class="external-link ">
+										<span class="icon">
+											<i class="fab fa-github"></i>
+										</span>
+										<span>Code</span>
+									</a>
+								</span>
+
+								<!-- ArXiv abstract Link -->
+								<span class="link-block">
+									<a href="https://arxiv.org/abs/2303.11137" target="_blank" class="external-link ">
+										<span class="icon">
+											<i class="ai ai-arxiv"></i>
+										</span>
+										<span>arXiv</span>
+									</a>
+								</span>
+
+								<!-- Dataset Link -->
+								<span class="link-block">
+									<a href="https://github.com/xq-meng/AnimeDiffusion" target="_blank" class="external-link">
+										<span class="icon">
+											<i class="fab fa-google-drive"></i>
+										</span>
+										<span>Dataset</span>
+									</a>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Teaser -->
+<section class="hero teaser">
+	<div class="container is-max-desktop">
+		<div class="hero-body">
+			<img src="../resources/image/AnimeDiffusion/teaser.png">
+		</div>
+	</div>
+</section>
+<!-- End Teaser -->
+
+<!-- Abstract -->
+<section class="section hero is-light">
+	<div class="container is-max-desktop">
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Abstract</h2>
+				<div class="content has-text-justified">
+					<p>
+						It is a time-consuming and tedious work for manually colorizing anime line drawing images, which is an essential stage in cartoon animation creation pipeline.
+						Reference-based line drawing colorization is a challenging task that relies on the precise cross-domain long-range dependency modelling between the line drawing and reference image.
+						Existing learning methods still utilize generative adversarial networks (GANs) as one key module of their model architecture.
+						In this paper, we propose a novel method called AnimeDiffusion using diffusion models that performs anime face line drawing colorization automatically.
+						To the best of our knowledge, this is the first diffusion model tailored for reference-based anime line drawing colorization.
+						In order to solve the huge training consumption problem of diffusion models, we design a hybrid training strategy, first pre-training a diffusion model with classifier-free guidance and then fine-tuning it with image reconstruction guidance.
+						We find that with a few iterations of fine-tuning, the model shows wonderful colorization performance.
+						For training AnimeDiffusion, we conduct an anime face line drawing colorization benchmark dataset, which contains 31696 training data and 579 testing data.
+						We hope this dataset can fill the gap of no available high resolution anime face dataset for colorization method evaluation.
+						Through multiple quantitative metrics evaluated on our dataset and a user study, we demonstrate AnimeDiffusion outperforms state-of-the-art GANs-based models for anime face line drawing colorization.
+						We also collaborate with professional artists to test and apply our AnimeDiffusion for their creation work.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Abstract -->
+
+<!-- Framework -->
+<section class="hero teaser">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3">Pipeline</h2>
+		<div class="hero-body">
+			<img src="../resources/image/AnimeDiffusion/framework.png">
+		</div>
+	</div>
+</section>
+<!-- End Framework -->
+
+<!-- Youtube -->
+<!--
+<section class="hero is-small is-light">
+	<div class="hero-body">
+		<div class="container">
+			<h2 class="title is-3">Video Presentation</h2>
+			<div class="columns is-centered has-text-centered">
+				<div class="column is-four-fifths">
+					<div class="publication-video">
+						<iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+-->
+<!-- End youtube -->
+
+<!-- Qualitative -->
+<section class="hero teaser">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3">Qualitative Evaluation</h2>
+		<div class="hero-body">
+			<img src="../resources/image/AnimeDiffusion/qualitative.jpeg">
+			<p>
+				Qualitative comparison for anime face with homochromatic pupils.
+				(a) reference images,
+				(b) line drawings,
+				(c) <a href="https://arxiv.org/abs/2005.05207" target="_blank" class="external-link">Lee et al.</a>,
+				(d) <a href="https://arxiv.org/abs/2207.06095" target="_blank" class="external-link">Li et al.</a>,
+				(e) <a href="https://arxiv.org/abs/2212.10988" target="_blank" class="external-link">Cao et al.</a>,
+				(f) AnimeDiffusion,
+				and (g) original color images.
+			</p>
+		</div>
+	</div>
+</section>
+<!-- End Qualitative -->
+
+<!--BibTex citation -->
+	<section class="section" id="BibTeX">
+		<div class="container is-max-desktop content">
+			<h2 class="title">BibTeX</h2>
+			<pre><code>
+@misc{cao2023animediffusion,
+    title={AnimeDiffusion: Anime Face Line Drawing Colorization via Diffusion Models},
+    author={Yu Cao and Xiangqiao Meng and P. Y. Mok and Xueting Liu and Tong-Yee Lee and Ping Li},
+    year={2023},
+    eprint={2303.11137},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+			</code></pre>
+		</div>
+</section>
+<!--End BibTex citation -->
+
+<footer class="footer">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-8">
+				<div class="content">
+					<p>
+						This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+						You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"	href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+						Commons Attribution-ShareAlike 4.0 International License</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
