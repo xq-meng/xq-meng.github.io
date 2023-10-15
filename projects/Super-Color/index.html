@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Super-Color</title>
+	<link rel="icon" type="image/x-icon" href="../../static/images/favicon.ico">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro">
+
+	<link rel="stylesheet" href="../../static/vinthony/css/bulma.min.css">
+	<link rel="stylesheet" href="../../static/vinthony/css/bulma-carousel.min.css">
+	<link rel="stylesheet" href="../../static/vinthony/css/bulma-slider.min.css">
+	<link rel="stylesheet" href="../../static/vinthony/css/fontawesome.all.min.css">
+	<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+	<link rel="stylesheet" href="../../static/vinthony/css/index.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+	<script defer src="../../static/vinthony/js/fontawesome.all.min.js"></script>
+	<script src="../../static/vinthony/js/bulma-carousel.min.js"></script>
+	<script src="../../static/vinthony/js/bulma-slider.min.js"></script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				processEscapes: true
+			}
+		});
+	</script>
+	<script src="../../static/vinthony/js/index.js"></script>
+</head>
+
+<body>
+<section class="hero">
+	<div class="hero-body">
+		<div class="container is-max-desktop">
+			<div class="columns is-centered">
+				<div class="column has-text-centered">
+					<h1 class="xtitle is-1 publication-title">Super-Color: Let There Be Focus</h1>
+					<div class="is-size-5 publication-authors">
+						<!-- Paper authors -->
+						<span class="author-block">
+							<a href="https://xq-meng.github.io/" target="_blank">Xiangqiao Meng</a><sup>1,2</sup>
+						</span>
+						<span class="author-block">
+							<a href="http://eda.ee.ucla.edu/people/faculty.html" target="_blank">Lei He</a> <sup>2</sup>&nbsp;
+						</span>
+						<span class="author-block">
+							<a href="http://graphics.csie.ncku.edu.tw/Tony/tony.htm" target="_blank">Tong-Yee Lee</a> <sup>3</sup>&nbsp;
+						</span>
+						<span class="author-block">
+							<a href="https://www4.comp.polyu.edu.hk/~pinli/" target="_blank">Ping Li</a> <sup>1</sup>&nbsp;
+						</span>
+						<br>
+
+						<div class="is-size-5 publication-authors">
+							<span class="author-block">
+								<sup>1</sup> The Hong Kong Polytechnic University, Hong Kong <br>
+                                <sup>2</sup> Eastern Institute for Advanced Study, Ningbo, Zhejiang, China <br>
+                                <sup>3</sup> National Cheng Kung University, Taiwan
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Teaser -->
+<section class="hero teaser">
+	<div class="container is-max-desktop">
+		<div class="hero-body">
+			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/teaser.png">
+		</div>
+	</div>
+</section>
+<!-- End Teaser -->
+
+<!-- Abstract -->
+<section class="section hero is-light">
+	<div class="container is-max-desktop">
+		<div class="columns is-centered has-text-centered">
+			<div class="column is-four-fifths">
+				<h2 class="title is-3">Abstract</h2>
+				<div class="content has-text-justified">
+					<p>
+						The distribution of colors in an image greatly influences viewer perception and is often expertly manipulated in various visual mediums like films and video games to guide focus, enhance narratives, and create emotion.
+						In contrast, creating such color-focused images requires superior expertise, as it involves a complex process of identifying specific areas to emphasize and manually modifying the color properties to augment the image's overall impact and expressiveness.
+						To overcome this challenge, we present <em>Super-Color</em>, a novel technique to colorize gray-scale images with color focus automatically.
+						Initially, we propose a color-focus extraction approach to identify the potential focus regions of gray-scale images.
+						Common salient object detection methods are inapplicable to our task, the limited training dataset makes the domain gap with real colorization scene.
+						We introduce image classification models to extract visual attention information to obtain a more general focus extraction capability.
+						Then, we propose colorization-LDM to transfer the image generation capability of text-to-image generation models into the colorization task.
+						We design a new latent gray-scale image encoder to guide colorization with multi-level feature injection and a conditional perceptual autoencoder to avoid unfaithful results.
+						Finally, we propose a color enhancement technique to balance preserving original aesthetics and enhancing key focus areas.
+						Extensive experiments affirm that our colorization backbone surpasses the performance of state-of-the-art methods.
+						Further user studies and application exploration show that our \textit{Super-Color} framework generates high-quality and visually pleasing colorization results, which cannot be achieved with general colorization models.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Abstract -->
+
+<!-- Framework -->
+<section class="hero teaser">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3">Pipeline</h2>
+		<div class="hero-body">
+			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/AnimeDiffusion/images/SuperColorPipeline.drawio.png">
+		</div>
+	</div>
+</section>
+<!-- End Framework -->
+
+<!-- Qualitative -->
+<section class="hero is-small">
+	<div class="hero-body">
+		<div class="container is-max-desktop">
+			<h2 class="title is-3">Qualitative Evaluation</h2>
+			<div id="results-carousel" class="carousel results-carousel">
+				<div class="item">
+					<h4 class="subtitle has-text-centered">Anime face with homochromatic pupils.</h4>
+        			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/comparison_1.png" alt="MY ALT TEXT"/>
+      			</div>
+      			<div class="item">
+					<h4 class="subtitle has-text-centered">Anime face with heterchromatic pupils.</h4>
+        			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/comparison_2.png" alt="MY ALT TEXT"/>
+      			</div>
+			</div>
+			<p>
+				Qualitative comparison for anime face with homochromatic and heterchromatic pupils.
+				(a) input gray-scale images,
+				(b) <a href="https://arxiv.org/abs/2005.10825" target="_blank" class="external-link">InstColor.</a>
+				(c) <a href="https://arxiv.org/abs/2102.04432" target="_blank" class="external-link">ColTran.</a>,
+				(d) <a href="https://arxiv.org/abs/2209.11223" target="_blank" class="external-link">UniColor.</a>,
+				(e) <a href="https://menghanxia.github.io/projects/disco.html" target="_blank" class="external-link">DISCO.</a>,
+				(f) our Colorization-LDM,
+				and (g) our <em>Super-Color</em>.
+			</p>
+		</div>
+	</div>
+</section>
+<!-- End Qualitative -->
+
+<!--BibTex citation -->
+<!--
+	<section class="section" id="BibTeX">
+		<div class="container is-max-desktop content">
+			<h2 class="title">BibTeX</h2>
+			<pre><code>
+@misc{cao2023animediffusion,
+    title={AnimeDiffusion: Anime Face Line Drawing Colorization via Diffusion Models},
+    author={Yu Cao and Xiangqiao Meng and P. Y. Mok and Tong-Yee Lee and Xueting Liu and Ping Li},
+    year={2023},
+    eprint={2303.11137},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+			</code></pre>
+		</div>
+</section>
+-->
+<!--End BibTex citation -->
+
+<footer class="footer">
+	<div class="container">
+		<div class="columns is-centered">
+			<div class="column is-8">
+				<div class="content">
+					<p>
+						This page was built using the <a href="https://github.com/vinthony/project-page-template">modification version</a> of <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> from <a href="https://github.com/vinthony">vinthony</a>.
+						This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+						Commons Attribution-ShareAlike 4.0 International License</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
