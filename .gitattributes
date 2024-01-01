@@ -1,6 +1,8 @@
 projects/AnimeDiffusion/images/** filter=lfs diff=lfs merge=lfs -text
 projects/Super-Color/images/** filter=lfs diff=lfs merge=lfs -text
+projects/Super-Color/pdfs/** filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
 *.jpg filter=lfs diff=lfs merge=lfs -text
 *.pdf filter=lfs diff=lfs merge=lfs -text
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+projects/AnimeDiffusion/pdfs/anime_diffusion.pdf filter=lfs diff=lfs merge=lfs -text
