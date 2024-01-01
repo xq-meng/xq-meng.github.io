@@ -72,16 +72,14 @@
 						<div class="column has-text-centered">
 							<div class="publication-links">
 								<!-- Arxiv PDF Link -->
-                                <!--
 								<span class="link-block">
-									<a href="https://github.com/xq-meng/AnimeDiffusion" target="_blank" class="external-link ">
+									<a href="https://github.com/xq-meng/xq-meng.github.io/raw/main/projects/AnimeDiffusion/pdfs/anime_diffusion.pdf" target="_blank" class="external-link ">
 										<span class="icon">
 											<i class="fas fa-file-pdf"></i>
 										</span>
 										<span>Paper</span>
 									</a>
 								</span>
-                                -->
 
 								<!-- GitHub Link -->
 								<span class="link-block">
@@ -159,17 +157,16 @@
 				<div class="content has-text-justified">
 					<p>
 						Being essential in animation creation, colorizing anime line drawings is usually a tedious and time-consuming manual task.
-						Reference-based line drawing colorization provides an intuitive and convenient way to automatically colorize target line drawings using reference images.
-						The prevailing approach for the task is based on generative adversarial networks (GANs), yet existing GAN-based methods still cannot generate high-quality results comparable to manual-colored results.
-						In this paper, a new AnimeDiffusion approach is proposed based on diffusion models for the automatic colorization of anime face line drawings.
-						This is the first attempt to use a diffusion model for the reference-based colorization task, which demands a high level of control over the image synthesis process.
+						Reference-based line drawing colorization provides an intuitive way to automatically colorize target line drawings using reference images.
+						The prevailing approaches are based on generative adversarial networks (GANs), yet these methods still cannot generate high-quality results comparable to manually-colored ones.
+						In this paper, a new AnimeDiffusion approach is proposed via hybrid diffusions for the automatic colorization of anime face line drawings.
+						This is the first attempt to utilize the diffusion model for reference-based colorization, which demands a high level of control over the image synthesis process.
 						To do so, a hybrid end-to-end training strategy is designed, including phase 1 for training diffusion model with classifier-free guidance and phase 2 for efficiently updating color tone with a target reference colored image.
-						The model learns denoising and structure-capturing ability in phase 1, and in phase 2 the model learns more accurate color information.
-						Utilizing our hybrid training strategy, the network convergence speed is accelerated, and the colorization performance is improved.
+						The model learns denoising and structure-capturing ability in phase 1, and in phase 2, the model learns more accurate color information. Utilizing our hybrid training strategy, the network convergence speed is accelerated, and the colorization performance is improved.
 						Our AnimeDiffusion generates colorization results with semantic correspondence and color consistency.
 						In addition, the model has a certain generalization performance for line drawings of different line styles.
 						To train and evaluate colorization methods, an anime face line drawing colorization benchmark dataset, containing 31,696 training data and 579 testing data, is introduced and shared.
-						Extensive experiments and a user study have demonstrated that our proposed AnimeDiffusion outperforms state-of-the-art GAN-based methods and another diffusion-based model, both quantitatively and qualitatively, for anime face line drawing colorization.
+						Extensive experiments and user studies have demonstrated that our proposed AnimeDiffusion outperforms state-of-the-art GAN-based methods and another diffusion-based model, both quantitatively and qualitatively.
 					</p>
 				</div>
 			</div>
