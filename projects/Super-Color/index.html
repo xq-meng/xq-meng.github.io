@@ -61,6 +61,19 @@
                                 <sup>2</sup> Eastern Institute for Advanced Study, Ningbo, Zhejiang, China <br>
                                 <sup>3</sup> National Cheng Kung University, Taiwan
 						</div>
+						<div class="column has-text-centered">
+							<div class="publication-links">
+								<!-- GitHub Link -->
+								<span class="link-block">
+									<a href="https://github.com/xq-meng/SuperColor" target="_blank" class="external-link ">
+										<span class="icon">
+											<i class="fab fa-github"></i>
+										</span>
+										<span>Code (comming soon)</span>
+									</a>
+								</span>
+                            </div>
+                        </div>
 					</div>
 				</div>
 			</div>
@@ -72,7 +85,7 @@
 <section class="hero teaser">
 	<div class="container is-max-desktop">
 		<div class="hero-body">
-			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/teaser.png">
+			<img src="https://iostatic.vrtoce.eu.org/supercolor/teaser.png">
 		</div>
 	</div>
 </section>
@@ -86,17 +99,15 @@
 				<h2 class="title is-3">Abstract</h2>
 				<div class="content has-text-justified">
 					<p>
-						The distribution of colors in an image greatly influences viewer perception and is often expertly manipulated in various visual mediums like films and video games to guide focus, enhance narratives, and create emotion.
-						In contrast, creating such color-focused images requires superior expertise, as it involves a complex process of identifying specific areas to emphasize and manually modifying the color properties to augment the image's overall impact and expressiveness.
-						To overcome this challenge, we present <em>Super-Color</em>, a novel technique to colorize gray-scale images with color focus automatically.
-						Initially, we propose a color-focus extraction approach to identify the potential focus regions of gray-scale images.
-						Common salient object detection methods are inapplicable to our task, the limited training dataset makes the domain gap with real colorization scene.
-						We introduce image classification models to extract visual attention information to obtain a more general focus extraction capability.
-						Then, we propose colorization-LDM to transfer the image generation capability of text-to-image generation models into the colorization task.
-						We design a new latent gray-scale image encoder to guide colorization with multi-level feature injection and a conditional perceptual autoencoder to avoid unfaithful results.
-						Finally, we propose a color enhancement technique to balance preserving original aesthetics and enhancing key focus areas.
-						Extensive experiments affirm that our colorization backbone surpasses the performance of state-of-the-art methods.
-						Further user studies and application exploration show that our \textit{Super-Color} framework generates high-quality and visually pleasing colorization results, which cannot be achieved with general colorization models.
+                        The distribution of colors in an image greatly influences viewer perception and is often expertly manipulated in various visual mediums like films and video games to guide focus, enhance narratives, and create emotion.
+                        In contrast, creating such color-focused images requires superior expertise, as it involves a complex process of identifying specific areas to emphasize and manually modifying the color properties to augment the image's overall impact and expressiveness.
+                        To overcome this challenge, we present <em>Super-Color</em>, a novel technique to colorize gray-scale images with color focus automatically. We propose a color-focus extraction approach to identify the potential focus regions of gray-scale images.
+                        We introduce pre-trained image encoding models to extract color-focus information to obtain a more general focus extraction capability.
+                        Then, we explore the ability of transformation image generation capability of text-to-image generation models into colorization task. We design a conditional perceptual autoencoder to avoid unfaithful results, and we analyze the existing popular tuning of conditional diffusion models and give a tuning paradigm for diffusion models under the colorization task.
+                        Finally, we propose a color enhancement technique to balance preserving original aesthetics and enhancing key focus areas.
+                        Extensive experiments affirm that our colorization backbone surpasses the performance of state-of-the-art methods.
+                        Further user studies and application exploration show that our <em>Super-Color</em> framework generates high-quality and visually pleasing colorization results, which cannot be achieved with general colorization models.
+                        We will release our code upon the acceptance of this paper.
 					</p>
 				</div>
 			</div>
@@ -110,7 +121,7 @@
 	<div class="container is-max-desktop">
 		<h2 class="title is-3">Pipeline</h2>
 		<div class="hero-body">
-			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/SuperColorPipeline.drawio.png">
+			<img src="https://iostatic.vrtoce.eu.org/supercolor/pipeline.png">
 		</div>
 	</div>
 </section>
@@ -123,10 +134,10 @@
 			<h2 class="title is-3">Qualitative Evaluation</h2>
 			<div id="results-carousel" class="carousel results-carousel">
 				<div class="item">
-        			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/comparison_1.png" alt="MY ALT TEXT"/>
+        			<img src="https://iostatic.vrtoce.eu.org/supercolor/comparison_1.png" alt="MY ALT TEXT"/>
       			</div>
       			<div class="item">
-        			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/comparison_2.png" alt="MY ALT TEXT"/>
+        			<img src="https://iostatic.vrtoce.eu.org/supercolor/comparison_2.png" alt="MY ALT TEXT"/>
       			</div>
 			</div>
 			<p>
@@ -144,27 +155,38 @@
 </section>
 <!-- End Qualitative -->
 
-<!-- Framework -->
+<!-- Diverse -->
 <section class="hero teaser">
 	<div class="container is-max-desktop">
 		<h2 class="title is-3">Diverse Colorization</h2>
 		<div class="hero-body">
-			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/diverse.png">
+			<img src="https://iostatic.vrtoce.eu.org/supercolor/diverse.png">
 		</div>
 	</div>
 </section>
-<!-- End Framework -->
+<!-- End Diverse -->
 
-<!-- Framework -->
+<!-- Historical -->
 <section class="hero teaser">
 	<div class="container is-max-desktop">
 		<h2 class="title is-3">Historical Photos Colorization</h2>
 		<div class="hero-body">
-			<img src="https://media.githubusercontent.com/media/xq-meng/xq-meng.github.io/main/projects/Super-Color/images/historical.png">
+			<img src="https://iostatic.vrtoce.eu.org/supercolor/historical.png">
 		</div>
 	</div>
 </section>
-<!-- End Framework -->
+<!-- End Historical -->
+
+<!-- Interactive -->
+<section class="hero teaser">
+	<div class="container is-max-desktop">
+		<h2 class="title is-3">Interactive Colorization</h2>
+		<div class="hero-body">
+			<img src="https://iostatic.vrtoce.eu.org/supercolor/interactive.png">
+		</div>
+	</div>
+</section>
+<!-- End Interactive -->
 
 <!--BibTex citation -->
 <!--
